@@ -1,0 +1,522 @@
+/* initial Setting */
+*{
+  box-sizing: border-box;
+  margin: 0;
+  /* color:white; */
+}
+ul {
+  padding: 0;
+}
+/* body{
+
+  background-color: black;
+} */
+
+.btn{
+  color: white;
+  background-color: black;
+  border: none;
+  cursor: pointer;
+  font-size: 3rem;
+}
+
+.btn:hover{
+  background-color: cadetblue;
+}
+.btn:active {
+  background-color: white;
+}
+
+.App {
+  color: white;
+  text-align: center;
+  position: relative;
+}
+
+a{
+  text-decoration: none;
+}
+
+.menu a:active{
+  font-weight: 700;
+}
+
+
+.nav-exit, .nav-exit-done{
+  transition: all 500ms;
+}
+.nav-enter-done{
+  
+  height: 60px;
+  font-size: 1.5rem;
+  transition: all 500ms;
+}
+
+header{
+  position: sticky;
+  top:0;
+  z-index: 500;
+}
+
+
+
+nav{
+  z-index: 5;
+  top:0;
+  font-family: 'Noto Sans Display', sans-serif;
+  color:whitesmoke;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  background-color: transparent;
+  padding: 0px 20px;
+  align-items: center;
+  position: relative;
+  font-size: 2rem;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  font-weight: 500;
+}
+
+.menu-list{
+  list-style: none;
+  margin: 0 15px;
+}
+
+main{
+  font-family: 'Noto Sans Display', sans-serif;
+}
+
+.introduce{
+  
+  display: flex;
+  margin-top: 60px;
+  height: 600px;
+  font-size: 4rem;
+  font-weight: 900;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: left;
+  padding: 20px;
+}
+pre{
+  font-family: 'Noto Sans Display', sans-serif;
+  font-size: 4rem;
+  font-weight: 500;
+}
+.contents{
+  /* display: flex; */
+  width: 100%;
+  padding: 0 20px;
+ 
+}
+.thumnail-box{
+  width: auto;
+  
+  position: relative;
+  /* display: inline-block; */
+  /* height: auto; */
+  /* overflow:auto;  */
+  padding: 0;
+  /* position: relative; */
+ 
+  
+}
+.thum-container{
+  position: relative;
+  width: auto;
+  display: inline-block;
+  margin-bottom: 30px;
+  
+}
+.span{
+  
+  /* position: absolute; */
+  width: 20px;
+  margin: 00;
+  padding: 10px;
+  font-size: 20px;
+  
+ 
+  
+  
+}
+.thumnail-box img{
+  padding: 10px;
+  display: block;
+  height: 100%;
+  width: 100%;
+  /* filter: grayscale(100%); */
+}
+
+
+
+
+
+
+
+
+
+
+/* pjoject page */
+  
+/* top */
+.before_btn{
+  position: absolute;
+  left: 30px;
+  top: 8rem;
+  width: 3rem;
+  height: 4rem;
+}
+.next_btn{
+  position: absolute;
+  right: 30px;
+  top: 8rem;
+  width: 3rem;
+  height: 4rem;
+}
+
+
+
+
+
+
+
+/* main */
+
+
+
+
+
+
+
+
+/*  */
+/* member page */
+
+.member_container{
+  margin:auto;
+  width: 90%;
+  /* background-color:darkblue */
+}
+
+.member_box{
+  
+  display: inline-block;
+  margin: 20px; 
+  width: 50rem;
+  height: 20rem;
+  /* background-color: ; */
+  /* border-bottom: 1px solid darkgray; */
+}
+
+/* .member_box:nth-child(2n-1){
+  border-right: 1px solid white ;
+} */
+.member{
+  display: flex;
+  width: 100%;
+}
+
+.memberimg{
+  display: inline-block;
+  
+  margin: 1rem;
+  width: 18rem;
+  height: 18rem;
+  /* background-color: darkgoldenrod; */
+}
+
+.memberinfo_box{
+  width: 28rem;
+  height: 18rem;
+  margin: 1rem;
+}
+.memberinfo{
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  height: 18rem;
+}
+.memberinfo>div{
+  flex :1;
+  /* border:1px solid darkcyan; */
+  padding: auto;
+}
+.infoText{
+ 
+  /* height: 100%; */
+  text-align: left;
+  display: block;
+  
+  font-size: 1.6rem; 
+  top: 0;
+}
+
+
+.user{
+  font-weight: 900;
+}
+/* admin 페이지 */
+.submitbtn{
+  margin: auto;
+  display: block;
+  width: 100px;
+  background-color: black;
+  border: none;
+  color: white;
+}
+
+
+.submitbtn:hover{
+  background-color: cadetblue;
+}
+.submitbtn:active {
+  background-color: white;
+}
+
+.adminbox{
+
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+
+.admininput{
+  width: 100px;
+  text-align: center;
+
+}
+select{
+  text-align: center;
+}
+
+input{
+  text-align: center;
+  display: block;
+}
+
+form div{
+  margin: 50px;
+}
+
+.input{
+  margin: auto;
+  width: 150px;
+  text-align: center;
+}
+
+input::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+
+
+
+textarea{
+  width: 200px;
+  height: 200px;
+  resize: none;
+
+}
+
+
+
+
+
+
+
+
+ 
+.content_container{
+  margin: 30px auto;
+}
+.content_container>div{
+  margin-top: 50px ;
+}
+
+.content_box{
+  /* background-color: violet; */
+  top: -1px;
+  width: 50%;
+  height: 40px;
+  margin: auto;
+  
+  /* border-top:1px solid white ; */
+  border-bottom:1px solid white ;
+  display: flex;
+  justify-content: space-between;
+  min-width: 800px;
+}
+
+.content_box div p{
+  /* width: 25%; */
+  /* background-color: wheat; */
+ margin: auto;
+ padding: auto;
+ display: block;
+ line-height: 40px;
+}
+
+.notice_con{
+  width: 100%;
+}
+.content_num{
+  text-align: center;
+
+  width: 10%;
+  border-right: 1px solid white;
+}
+.content_title{
+  width: 60%;
+  /* text-align: left; */
+}
+.content_date{
+  border-left:1px solid white ;
+  width: 10%;
+}
+
+
+.plan_container{
+  margin: 2rem auto;
+  margin: auto;
+  width: 55%;
+  color: aquamarine;
+  display: block;
+  clear: both;
+}
+
+.plan_box{
+  width: 100%;
+  height: auto;
+
+}
+.plan_item_box{
+  margin: 2rem auto;
+  width: 80%;
+  background-color: beige;
+  text-align: left;
+}
+
+
+.close_btn_box{
+  margin: 10px;
+  float: right;
+}
+.plan_item_plan{
+  
+  width: 50%;
+  margin: auto ;
+  height: auto;
+  float: left;
+
+}
+.plan-item{
+  display: flex;
+  justify-content: space-between;
+}
+.plan_info{
+
+  margin: 10px auto ;
+  width: 70%;
+  font-size: 2rem;
+  height: 100%;
+  /* clear: both; */
+}
+
+
+/* projectTOp */
+.slider_container{
+  width: 100%;
+  height: 24rem;
+}
+
+/* projectlist */
+.project_item_container{
+  width: 13rem;
+  margin: auto;
+}
+.project_item_box{
+  width: 13rem;
+  height: 18rem;
+  /* height:15rem; */
+  
+}
+.project_img_box{
+  margin: 1rem 0;
+  width: 100%;
+  height: 13rem;
+  /* background-color: violet; */
+}
+.project_info_box{
+  height: 3rem;
+}
+.project_img_box>img , 
+.project_img_box>p {
+  width: 100%;
+  opacity: 0.5;
+}
+.slick-dots li.slick-active button:before{
+  color: rgb(255, 255, 255);
+}
+
+
+.slick-center div,.slick-center img,.slick-center p {
+  font-size: 1.1rem;
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+.photo_total{
+  /* display: flex; */
+  width: 90%;
+  margin: auto;
+
+}
+
+.photo_container{
+  
+ 
+  /* background-color: beige; */
+  margin: 3rem auto;
+  display: inline-block;
+  position: relative;
+}
+
+.photo_box{
+  /* margin: 1rem 0; */
+
+}
+
+.photo_img_box{
+  /* width: 15rem; */
+  /* background-color: darkgreen; */
+}
+.photo_img_box img{
+  width: 98%;
+}
+.photo_info_box{
+  position :absolute;
+  width: 100%;
+  height: 3rem;
+  /* background-color: darkgrey; */
+  bottom : -3rem;
+  padding: 1%;
+}
+.photo_info_box p {
+  text-align: left;
+ 
+}
+
+
+p {
+  color: white;
+}

@@ -1,0 +1,163 @@
+
+import './App.css';
+import React,{useEffect, useState, useRef, forwardRef} from 'react'
+
+function App() {
+  let [image,image변경]=useState([0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]);
+  let [imageRatio,imageRatio수정]=useState([]);
+  let [imageRatio상태,imageRatio상태수정]=useState(false); ///false 는 빈상태
+  const boxRef = useRef([])
+
+//////////////////이미지 랜덤배치
+  const randomImage=(i)=>{
+    let random_image=[...i];
+    random_image.sort(()=>Math.random()-0.5);
+    image변경(random_image)
+  }
+
+  useEffect(()=>{
+    setTimeout(() => {
+      randomImage(image)
+      console.log(image)
+    },80); },[])
+
+
+  const randomImage=(i)=>{
+    let random_image=[...i];
+    random_image.sort(()=>Math.random()-0.5);
+    image변경(random_image)
+  }
+  useEffect(()=>randomImage(image),[])
+
+
+
+//////////////////////이미지 비율구하기
+  const 이미지비율구하기 = ()=>{
+    let 예비이미지비율=[...imageRatio];
+    image.map((a,i)=>{
+      let x = boxRef.current[i].current.clientWidth;
+      let y = boxRef.current[i].current.clientHeight;
+      // 디버깅구간//
+      // console.log(i,"",x)
+      // console.log(i,"",y)
+      ////////////
+      예비이미지비율[i]=Math.round(x/y*100000)
+    });
+    imageRatio수정(예비이미지비율)
+    let random= Math.floor(Math.random()*imageRatio.length)
+   if(imageRatio[random]!=undefined){
+      imageRatio상태수정(true) //비율구하기 완료
+    }
+    }
+  // useEffect(()=>{
+  //   if(imageRatio상태==false){
+  //     setTimeout(() => {
+  //       이미지비율구하기();
+  //     // console.log(imageRatio);
+  //   }, 200);
+  // }},[imageRatio])
+//////////////////////////////////
+  const 이미지배치하기 =(array) =>{
+    let 작업할개수=array.length;
+    let now개수=Math.floor(Math.random()*4)+2; //2~6 
+    let before개수=0;
+    let rowWidthSum= 0;
+    let 작업한개수=0;
+    while(작업할개수>0 && 작업할개수!=0){
+      if(작업할개수>=now개수&&작업할개수!=0){
+        array.slice(작업한개수,작업한개수+now개수).map((a,i)=>{
+          rowWidthSum+=a;
+          // console.log(a,"",rowWidthSum)
+        })
+          
+        array.slice(작업한개수,작업한개수+now개수).map((a,i)=>{
+          boxRef.current[i+작업한개수].current.style.width=`${a/rowWidthSum*100}%`
+        
+        })
+      }
+      작업할개수-=now개수;
+      before개수=now개수;
+      rowWidthSum=0
+      작업한개수+=now개수
+      now개수=Math.floor(Math.random()*4)+2;
+      const now개수구하기=()=>{
+        if(now개수<=작업할개수){
+          return now개수
+        }
+        else{
+          return now개수구하기()
+        }
+      }
+    }
+  }
+  
+// useEffect(()=>{
+// if(imageRatio상태==true){
+// 이미지배치하기(imageRatio)}
+// })
+
+
+  return (
+    <div className="App">
+      <header>
+        <nav>
+          <div className='logo'>I B D A ᶜᵣᵉᵂ</div>
+          <div className='menu'>
+            <ul>
+              <li className='menu-list'>Project</li>
+              <li className='menu-list'>Member</li>
+              <li className='menu-list'>Contect</li>
+            </ul>
+          </div>
+          <div className='sidemenu'>Information</div>
+        </nav>
+      </header>
+
+      <main className='main-content'>
+        <div className='introduce'>
+          <div>
+          <p>We&emsp;are&emsp;active </p>
+          <br></br>
+          <p> Fashion &emsp;Archive</p>
+          <br></br>
+          <p>In &emsp;Asan&emsp; & &emsp;Cheonan</p>
+          </div>
+        </div>
+        <div className='contents'>
+          {
+            image.map((imgnum,i)=>{
+              boxRef.current[i] = React.createRef()
+              console.log("",imgnum)
+            return(
+              <Image imgnum={i} ref={boxRef.current[i]} key={i}></Image>
+            )
+            })
+          }
+        </div>
+      </main>
+
+    </div>
+  );
+}
+ 
+
+export default App;
+
+
+const Image= forwardRef((props,ref)=>{
+  
+  return(
+      <div className='thum-container'ref={ref}>
+      <div className='thumnail-box' >
+        <img src={'./images/'+props.imgnum+'.jpg'} ></img>
+      </div>
+      <div className="span"><span>{props.imgnum}</span></div>
+      </div>
+  )
+})
+
+
+// function randomHeight(){
+//   let nowheight=Math.floor(Math.random()*410)+200;
+//   return nowheight
+// }  style={{height:+randomHeight()+'px'}} 

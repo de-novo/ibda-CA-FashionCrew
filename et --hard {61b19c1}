@@ -1,0 +1,62 @@
+[33m43d05e6[m[33m ([m[1;36mHEAD -> [m[1;32mjwt[m[33m, [m[1;31morigin/jwt[m[33m)[m HEAD@{0}: checkout: moving from login to jwt
+[33mea98599[m[33m ([m[1;31morigin/login[m[33m, [m[1;32mlogin[m[33m)[m HEAD@{1}: checkout: moving from jwt to login
+[33m43d05e6[m[33m ([m[1;36mHEAD -> [m[1;32mjwt[m[33m, [m[1;31morigin/jwt[m[33m)[m HEAD@{2}: checkout: moving from 61b19c173bef7e8d916af0a0b356ee857e4f8e69 to jwt
+[33m61b19c1[m HEAD@{3}: commit: jwt완성
+[33mc71356f[m HEAD@{4}: checkout: moving from 0066c276a1aea8bdc3968c0c2c2086b5c9962e88 to c71356f762ec1ce9472b878d66f636d00d9620a6
+[33m0066c27[m HEAD@{5}: checkout: moving from 096240459ae28a2c24749d9c69d106992d8d2f95 to 0066c276a1aea8bdc3968c0c2c2086b5c9962e88
+[33m0962404[m HEAD@{6}: commit: 망했다
+[33mc71356f[m HEAD@{7}: checkout: moving from jwt to origin/jwt
+[33m43d05e6[m[33m ([m[1;36mHEAD -> [m[1;32mjwt[m[33m, [m[1;31morigin/jwt[m[33m)[m HEAD@{8}: commit: jwt 6 (5가잘작동함)
+[33mc71356f[m HEAD@{9}: checkout: moving from jwt to jwt
+[33mc71356f[m HEAD@{10}: checkout: moving from jwt to jwt
+[33mc71356f[m HEAD@{11}: commit: jwt 5
+[33m0066c27[m HEAD@{12}: checkout: moving from 6f32eda9f231752530b93161d845930a668a2c68 to jwt
+[33m6f32eda[m HEAD@{13}: checkout: moving from jwt to 6f32eda9f231752530b93161d845930a668a2c68
+[33m0066c27[m HEAD@{14}: commit: jwt 4
+[33m6f32eda[m HEAD@{15}: commit: jwt 3
+[33m9e1264a[m HEAD@{16}: checkout: moving from white-v1 to jwt
+[33m7adc959[m[33m ([m[1;31morigin/white-v1[m[33m, [m[1;32mwhite-v1[m[33m)[m HEAD@{17}: checkout: moving from login to white-v1
+[33mea98599[m[33m ([m[1;31morigin/login[m[33m, [m[1;32mlogin[m[33m)[m HEAD@{18}: checkout: moving from jwt to login
+[33m9e1264a[m HEAD@{19}: commit: jwt 설정중
+[33m6ea0b4e[m HEAD@{20}: checkout: moving from 843ebf89d11e9971f0524cdde8603b7e002ad816 to jwt
+[33m843ebf8[m HEAD@{21}: checkout: moving from e5adf3a845c1fc2f6c8fc763319e8eb2d3106e37 to 843ebf89d11e9971f0524cdde8603b7e002ad816
+[33me5adf3a[m HEAD@{22}: checkout: moving from login to e5adf3a845c1fc2f6c8fc763319e8eb2d3106e37
+[33mea98599[m[33m ([m[1;31morigin/login[m[33m, [m[1;32mlogin[m[33m)[m HEAD@{23}: checkout: moving from jwt to login
+[33m6ea0b4e[m HEAD@{24}: checkout: moving from login to jwt
+[33mea98599[m[33m ([m[1;31morigin/login[m[33m, [m[1;32mlogin[m[33m)[m HEAD@{25}: checkout: moving from jwt to login
+[33m6ea0b4e[m HEAD@{26}: commit: gg
+[33m843ebf8[m HEAD@{27}: commit: jwt
+[33me5adf3a[m HEAD@{28}: commit: jwt
+[33mea98599[m[33m ([m[1;31morigin/login[m[33m, [m[1;32mlogin[m[33m)[m HEAD@{29}: checkout: moving from login to jwt
+[33mea98599[m[33m ([m[1;31morigin/login[m[33m, [m[1;32mlogin[m[33m)[m HEAD@{30}: commit: login
+[33m7adc959[m[33m ([m[1;31morigin/white-v1[m[33m, [m[1;32mwhite-v1[m[33m)[m HEAD@{31}: checkout: moving from white-v1 to login
+[33m7adc959[m[33m ([m[1;31morigin/white-v1[m[33m, [m[1;32mwhite-v1[m[33m)[m HEAD@{32}: commit: 2021-11-29
+[33m9db2b26[m HEAD@{33}: commit: 2021-11-28
+[33mc09de28[m HEAD@{34}: checkout: moving from white to white-v1
+[33m44899eb[m[33m ([m[1;31morigin/white[m[33m, [m[1;32mwhite[m[33m)[m HEAD@{35}: checkout: moving from proxy to white
+[33m6c2092b[m[33m ([m[1;32mproxy[m[33m)[m HEAD@{36}: checkout: moving from white-v1 to proxy
+[33mc09de28[m HEAD@{37}: commit: white -v1
+[33m44899eb[m[33m ([m[1;31morigin/white[m[33m, [m[1;32mwhite[m[33m)[m HEAD@{38}: checkout: moving from white to white-v1
+[33m44899eb[m[33m ([m[1;31morigin/white[m[33m, [m[1;32mwhite[m[33m)[m HEAD@{39}: commit: white-desing
+[33m6c2092b[m[33m ([m[1;32mproxy[m[33m)[m HEAD@{40}: checkout: moving from proxy to white
+[33m6c2092b[m[33m ([m[1;32mproxy[m[33m)[m HEAD@{41}: commit: 포토 페이지 구현중
+[33m03ae0d0[m[33m ([m[1;31morigin/proxy[m[33m)[m HEAD@{42}: commit: 컨텐트추가 페이지 (ing)
+[33m57b34bd[m HEAD@{43}: commit: add Project , photoRatio
+[33m1cfdcad[m HEAD@{44}: commit: add Project , photoRatio
+[33m2ad74d4[m HEAD@{45}: commit: 멤버추가완료
+[33m33498f3[m HEAD@{46}: checkout: moving from master to proxy
+[33m4aae91f[m[33m ([m[1;31morigin/master[m[33m, [m[1;32mmaster[m[33m)[m HEAD@{47}: checkout: moving from proxy to master
+[33m33498f3[m HEAD@{48}: commit: proxy add
+[33m4aae91f[m[33m ([m[1;31morigin/master[m[33m, [m[1;32mmaster[m[33m)[m HEAD@{49}: checkout: moving from master to proxy
+[33m4aae91f[m[33m ([m[1;31morigin/master[m[33m, [m[1;32mmaster[m[33m)[m HEAD@{50}: checkout: moving from proxy to master
+[33m4aae91f[m[33m ([m[1;31morigin/master[m[33m, [m[1;32mmaster[m[33m)[m HEAD@{51}: reset: moving to HEAD
+[33m4aae91f[m[33m ([m[1;31morigin/master[m[33m, [m[1;32mmaster[m[33m)[m HEAD@{52}: checkout: moving from master to proxy
+[33m4aae91f[m[33m ([m[1;31morigin/master[m[33m, [m[1;32mmaster[m[33m)[m HEAD@{53}: checkout: moving from proxy to master
+[33m4aae91f[m[33m ([m[1;31morigin/master[m[33m, [m[1;32mmaster[m[33m)[m HEAD@{54}: checkout: moving from master to proxy
+[33m4aae91f[m[33m ([m[1;31morigin/master[m[33m, [m[1;32mmaster[m[33m)[m HEAD@{55}: reset: moving to origin/master
+[33m4aae91f[m[33m ([m[1;31morigin/master[m[33m, [m[1;32mmaster[m[33m)[m HEAD@{56}: reset: moving to HEAD
+[33m4aae91f[m[33m ([m[1;31morigin/master[m[33m, [m[1;32mmaster[m[33m)[m HEAD@{57}: reset: moving to HEAD
+[33m4aae91f[m[33m ([m[1;31morigin/master[m[33m, [m[1;32mmaster[m[33m)[m HEAD@{58}: reset: moving to HEAD
+[33m4aae91f[m[33m ([m[1;31morigin/master[m[33m, [m[1;32mmaster[m[33m)[m HEAD@{59}: checkout: moving from master to master
+[33m4aae91f[m[33m ([m[1;31morigin/master[m[33m, [m[1;32mmaster[m[33m)[m HEAD@{60}: checkout: moving from master to master
+[33m4aae91f[m[33m ([m[1;31morigin/master[m[33m, [m[1;32mmaster[m[33m)[m HEAD@{61}: commit (initial): d
