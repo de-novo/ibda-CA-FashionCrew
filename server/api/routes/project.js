@@ -22,11 +22,11 @@ export default (app) => {
         if (projectId === `1`) {
             const photos = await photoServiceInstance.photoModel.find().limit(10);
 
-            return res.status(200).json({ projects,photos });
+            return res.status(200).json({ projects, photos });
         }
 
         const photos = await photoServiceInstance.findByProjectId(projectId);
 
-        return res.status(200).json({ projects,photos });
+        return res.status(200).json({ projects, photos });
     });
 };
