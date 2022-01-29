@@ -3,7 +3,7 @@ import path from "path";
 import cookieParser from "cookie-parser";
 import config from "../config/index.js";
 import routes from "../api/index.js";
-import cors from 'cors';
+import cors from "cors";
 export default (app) => {
     const whitelist = ["http://localhost:3000"];
     const corsOptions = {
@@ -13,7 +13,7 @@ export default (app) => {
         },
         credentials: true,
     };
-  
+    const __dirname = path.resolve();
     app.use("/uploads", express.static("uploads"));
 
     app.use(cors(corsOptions));
@@ -21,9 +21,15 @@ export default (app) => {
     app.use(express.urlencoded({ extended: true }));
     app.use(cookieParser());
     app.use(express.static(path.join(path.resolve(), "public")));
-
+    // var filePath = "../ibda/build/index.html";
+    // var resolvedPath = path.resolve(filePath);
+    // console.log("resolvedPath", resolvedPath);
     // API Route 설정
     app.use(config.api.prefix, routes());
+    app.use(express.static(path.join(__dirname, "../ibda/build")));
+    app.get("*", (req, res) => {
+        res.sendFile(path.join(__dirname, "../ibda/build", "index.html"));
+    });
     // const __dirname = path.resolve();
     // app.use(express.json());
     // app.use(express.urlencoded({ extended: true }));

@@ -16,15 +16,17 @@ export default (app) => {
 
     route.get("/:id", async (req, res) => {
         const projectId = req.params.id;
+        const projects = await projectModel.find();
+
         const photoServiceInstance = new photoService(photoModel);
         if (projectId === `1`) {
             const photos = await photoServiceInstance.photoModel.find().limit(10);
 
-            return res.status(200).json({ photos });
+            return res.status(200).json({ projects,photos });
         }
 
         const photos = await photoServiceInstance.findByProjectId(projectId);
 
-        return res.status(200).json({ photos });
+        return res.status(200).json({ projects,photos });
     });
 };

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Carousel from "../../components/Carousel/Carousel";
 import styled from "styled-components";
 import PhotoContainer from "../../components/PhotoCard.js/PhotoContainer";
-import { objectToQueryString } from "../../utils/url";
+
 import { useParams } from "react-router-dom";
 import photoService from "../../service/photo_service";
 const HR = styled.hr`
@@ -16,7 +16,7 @@ function ProjectContainer() {
     const params = useParams();
     const [projects, setProjects] = useState(null);
     const [photos, setPhotos] = useState(null);
-
+    console.log('렌더링')
     // useEffect(() => {
     //     if (Number(params.id) === 1 || !params.id) {
     //         setPhoto(photos);
@@ -30,8 +30,9 @@ function ProjectContainer() {
     useEffect(() => {
         if (!projects) {
             (async function () {
+
                 const Data = await photoService.getPhotoByProjectId(params.id);
-                console.log(Data);
+
                 setProjects(Data.projects);
                 setPhotos(Data.photos);
             })();
@@ -42,10 +43,10 @@ function ProjectContainer() {
                 setPhotos(photo.photos);
             })();
         }
-    }, [params, setPhotos, setProjects]);
+    }, [params, setPhotos, setProjects,projects]);
     return (
         <div>
-            <Carousel projects={projects || []}></Carousel>
+            <Carousel projects={projects?projects:null } params={params}></Carousel>
             <HR></HR>
             <PhotoContainer photos={photos || []}></PhotoContainer>
         </div>

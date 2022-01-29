@@ -11,6 +11,8 @@
 # production
 /build
 
+clinet
+
 
 MongodbUrl.js
 denovolife.pem

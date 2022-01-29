@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-const list = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19];
+
 export const useImage = ({ WindowSize, images }) => {
     const [imageList, setImageList] = useState([]);
 
@@ -7,7 +7,7 @@ export const useImage = ({ WindowSize, images }) => {
         if (WindowSize.width > 960) {
             let state = [[], [], []];
             images?.map((item, index) => {
-                return index % 3 === 0 ? state[0].push(item) : index % 3 == 1 ? state[1].push(item) : state[2].push(item);
+                return index % 3 === 0 ? state[0].push(item) : index % 3 === 1 ? state[1].push(item) : state[2].push(item);
             });
             setImageList(state);
         } else if (WindowSize.width > 768) {

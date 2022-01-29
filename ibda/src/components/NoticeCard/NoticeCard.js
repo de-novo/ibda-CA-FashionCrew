@@ -60,7 +60,7 @@ function NoticeCard({ contents }) {
                         <Title>{content?.title}</Title>
                         <Info>{content?.writer?.name}</Info>
                         <Boundary></Boundary>
-                        <Info>{content?.date.slice(0,10)}</Info>
+                        <Info>{content?.date?.slice(0,10)}</Info>
                     </InfoBox>
                     <Article>
                         <span>{content?.content}</span>

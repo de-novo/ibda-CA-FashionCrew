@@ -5,10 +5,11 @@ class Project {
         this.api = api;
     }
     // getProject
-    GetProjectPhoto = async (photoArray) => {
-        const filtered = photoArray.fliter((item) => {
-            return Number(item.project) === Number(this.project._id);
-        });
+    GetProject = async () => {
+     
+            const project = await this.api.get(`/project`);
+            return project
+        
     };
     getPhotoByProjectId = async (projectId) => {
         const Photos = await this.api.get(`/project`, projectId);

@@ -1,7 +1,7 @@
 import React from "react";
 import MemberCard from "../MemberCard/MemberCard";
 import MemberNameCard from "../MemberNameCard/MemberNameCard";
-import styled, { css } from "styled-components";
+
 
 import { Container, Arrow, Containerhover, CSS } from "./styles";
 

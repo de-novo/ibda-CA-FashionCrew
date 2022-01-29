@@ -7,12 +7,8 @@ import Formbox from "../FormBox/Formbox";
 const Container = styled.div`
     margin: 3.2rem;
 `;
-function AdminBox({ List, tabHandler, setList }) {
-    const editForm = (key,target)=>{
-
-    }
-
-
+function AdminBox({ List, tabHandler }) {
+ 
 
 
     

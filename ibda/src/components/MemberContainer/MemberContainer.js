@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import MemberNameCard from "../MemberNameCard/MemberNameCard";
+
 import MemberBox from "../MemberBox/MemberBox";
 import memberService from "../../service/member_service";
 const Container = styled.div`
@@ -32,15 +32,14 @@ const Border = styled.div`
 
 function MemberContainer() {
     const [members, setMembers] = useState();
-    const [photos, setPhotos] = useState();
+
     useEffect(() => {
         (async function () {
             const Data = await memberService.GetMembers();
-            console.log(Data.members)
+            console.log(Data.members);
             setMembers(Data.members);
-        
         })();
-    }, [setMembers, memberService]);
+    }, [setMembers]);
     return (
         <Container>
             <Border className="top"></Border>
@@ -51,9 +50,9 @@ function MemberContainer() {
 
                 {members?.map((item, index) => {
                     if (item.name === "admin") {
-                        return;
+                        return null
                     }
-                    return <MemberBox member={item} photos={photos} key={index} index={index}></MemberBox>;
+                    return <MemberBox member={item} key={index} index={index}></MemberBox>;
                 })}
             </Box>
             <Border className="바보"></Border>

@@ -1,7 +1,7 @@
-import React, { useEffect, useState, useContext } from "react";
+import React from "react";
 import { NavLink } from "react-router-dom";
 
-function MenuItem({ to, title, activeStyle }) {
+function MenuItem({ to, title }) {
 
     return (
         <div>

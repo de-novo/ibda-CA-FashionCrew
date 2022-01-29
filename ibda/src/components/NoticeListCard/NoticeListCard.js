@@ -17,7 +17,7 @@ const Col = styled.col`
     width: 15%;
     background-color: white;
 `;
-const Head = styled.thead``;
+// const Head = styled.thead``;
 function NoticeCard({ contents }) {
     const match = useMatch("/content/notice");
     const navigate = useNavigate();

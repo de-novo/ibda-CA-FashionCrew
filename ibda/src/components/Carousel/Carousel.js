@@ -1,18 +1,21 @@
-import React, { useContext } from "react";
+import React, { useContext,  } from "react";
 import { Slide } from "./styles";
 import { useNavigate } from "react-router-dom";
 import PhotoCard from "../PhotoCard.js/PhotoCard";
 import { ThemeContext } from "styled-components";
 
-function Carousel({ projects }) {
+function Carousel({ projects, params }) {
     const theme = useContext(ThemeContext);
-
+  
+    console.log(params);
     const navigate = useNavigate();
     const settings = {
         beforeChange: async (current, next) => {
-            navigate(`${projects[next] ? projects[next]._id : "/project"}`);
+            // navigate(`${projects[next] ? projects[next]._id : "/project"}`);
+            navigate(`${projects[next]._id ?? "/project"}`);
+         
         },
-        // initialSlide: initialSlide,
+        
 
         focusOnSelect: true,
         centerMode: true,
@@ -31,21 +34,21 @@ function Carousel({ projects }) {
                 breakpoint: 1700, //화면 사이즈 960px
                 settings: {
                     //위에 옵션이 디폴트 , 여기에 추가하면 그걸로 변경
-                    slidesToShow: projects.length >= 7 ? 7 : projects.length,
+                    slidesToShow: projects?.length >= 7 ? 7 : projects?.length,
                 },
             },
             {
                 breakpoint: 1600, //화면 사이즈 960px
                 settings: {
                     //위에 옵션이 디폴트 , 여기에 추가하면 그걸로 변경
-                    slidesToShow: projects.length >= 5 ? 5 : projects.length,
+                    slidesToShow: projects?.length >= 5 ? 5 : projects?.length,
                 },
             },
             {
                 breakpoint: 1200, //화면 사이즈 960px
                 settings: {
                     //위에 옵션이 디폴트 , 여기에 추가하면 그걸로 변경
-                    slidesToShow: projects.length >= 3 ? 3 : projects.length,
+                    slidesToShow: projects?.length >= 3 ? 3 : projects?.length,
                 },
             },
             {

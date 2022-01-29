@@ -1,10 +1,10 @@
 import axios from "axios";
 
-import { useNavigate } from "react-router-dom";
 import { getStoeredAuthToken, removeStoredAuthToken } from "./authToken.js";
 import { objectToQueryString } from "./url.js";
 const defaults = {
-    baseURL: process.env.API_URL || "http://localhost:3000/api",
+    // baseURL: process.env.API_URL || "http://localhost:3000/api",
+    baseURL: process.env.API_URL || "/api",
     headers: () => ({
         "Content-Type": "application/json",
         Authorization: getStoeredAuthToken() ? `Bearer ${getStoeredAuthToken()}` : undefined,
@@ -34,13 +34,11 @@ const api = (method, url, variavles, header) => {
         })
             .then((res) => resolve(res.data))
             .catch((err) => {
-                console.log(err.response.data.message);
-
                 if (err.response?.data.error?.code === "INVAILD_TOKEN") {
-                    alert(err.response.data.message)
+                    alert(err.response?.data?.message);
                     removeStoredAuthToken();
-                } else if (err.response.statusText === "Forbidden") {
-                    alert(err.response.data.message)
+                } else if (err.response?.statusText === "Forbidden") {
+                    alert(err.response.data.message);
                     removeStoredAuthToken();
                 }
             });
@@ -56,7 +54,7 @@ const optimisticUpdate = async (url, { updateFields, currentFields, setLocalData
     }
 };
 
-export default {
+const data = {
     get: (...args) => api("get", ...args),
     post: (...args) => api("post", ...args),
     put: (...args) => api("put", ...args),
@@ -64,3 +62,4 @@ export default {
     delete: (...args) => api("delete", ...args),
     optimisticUpdate,
 };
+export default data;

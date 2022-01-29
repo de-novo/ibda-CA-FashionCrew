@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
 
 import api from "../utils/api";
-import axios from "axios";
-import { storeAuthToken } from "../utils/authToken.js";
+
 import { useNavigate } from "react-router-dom";
 function useInput(url, validation, form, setToken) {
     const [inputs, setInputs] = useState({});
@@ -16,8 +15,7 @@ function useInput(url, validation, form, setToken) {
     //     return;
     // }
     const onChange = (e) => {
-        const { value, name, dataset, id, files, key } = e.target;
-
+        const { value, name,  files} = e.target;
         if (name === "img") {
             return setInputs({
                 ...inputs,
@@ -30,7 +28,7 @@ function useInput(url, validation, form, setToken) {
         });
     };
     const onChangeOfArray = (e, index) => {
-        const { value, name, dataset, id, key } = e.target;
+        const { value, name } = e.target;
 
         const target = inputs[name] ?? [];
         target[index] = value;
