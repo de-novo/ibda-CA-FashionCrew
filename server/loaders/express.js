@@ -5,7 +5,7 @@ import config from "../config/index.js";
 import routes from "../api/index.js";
 import cors from "cors";
 export default (app) => {
-    const whitelist = ["http://localhost:3000"];
+    const whitelist = ["http://localhost:3000","http://ibda-crew.com","http://www.ibda-crew.com","https://ibda-crew.com","https://www.ibda-crew.com"];
     const corsOptions = {
         origin: function (origin, callback) {
             const isWhitelisted = whitelist.indexOf(origin) !== -1;

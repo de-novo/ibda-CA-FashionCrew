@@ -39,9 +39,9 @@ function PhotoCard({ width, item, info }) {
         <Container theme={theme} width={width}>
             <Box width={width}>
                 <ImgBox theme={theme} width={width}>
-                    <Img src={`http://localhost:4000/${item?.imgUrl}`}></Img>
+                    <Img src={`/${item?.imgUrl}`}></Img>
                 </ImgBox>
-                {info===true ? <InfoBox>{item?._id}</InfoBox> : null}
+                {info === true ? <InfoBox>{item?._id}</InfoBox> : null}
             </Box>
         </Container>
     );
